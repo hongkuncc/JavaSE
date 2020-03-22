@@ -14,7 +14,7 @@ import java.io.FileOutputStream;
 * */
 public class Demo04OutputStream {
     public static void main(String[] args) {
-//        FileOutputStream fos = new FileOutputStream();
+        FileOutputStream fos = new FileOutputStream();
         
     }
 }
