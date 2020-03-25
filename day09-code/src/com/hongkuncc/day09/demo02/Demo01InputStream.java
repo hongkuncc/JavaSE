@@ -29,8 +29,33 @@ public class Demo01InputStream {
     public static void main(String[] args) throws IOException {
         FileInputStream fis = new FileInputStream("day09-code\\a.txta.txt");
 // int read() 读取一个字节并返回，读取到文件的末尾返回-1
+       /* int len = fis.read();
+        System.out.println(len);//97,a
+
         int len = fis.read();
-        System.out.println(len);
+        System.out.println(len);//98,b
+        int len = fis.read();
+        System.out.println(len);//99,a
+        int len = fis.read();
+        System.out.println(len);//-1结束
+        int len = fis.read();
+        System.out.println(len);//-1结束*/
+       /*
+       * 以上是重复过程，可以使用循环优化
+       * 不知道文件中有多少个字节，使用while循环，-1结束
+       *
+       *布尔表达式 len = fis.read()!=-1
+       *
+       *
+       * */
+       while(fis.read()!= -1){
+           System.out.println(fis.read());
+
+       }
+
+
+
+
 //        释放资源
         fis.close();
 
