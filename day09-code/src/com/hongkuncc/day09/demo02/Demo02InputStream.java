@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
+
 /*
 * 字节输入流一次读取多个字节的方法：
 *   int read(bvte[] b)从输入流中读取一定数量的字节，并将其存储在缓冲区数组b中
@@ -39,7 +40,8 @@ public class Demo02InputStream {
         byte[] bytes = new byte[1024];
         int len = 0;
         while((len = fis.read(bytes))!=-1){
-            System.out.println(new String(bytes,0,len));
+
+            System.out.println(new java.lang.String(bytes,0,len));
         }
 
         //释放资源
