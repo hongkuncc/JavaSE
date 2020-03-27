@@ -1,5 +1,6 @@
 package com.hongkuncc.day09.demo06;
 
+import java.io.*;
 import java.util.Properties;
 import java.util.Set;
 
@@ -15,8 +16,24 @@ import java.util.Set;
 *
 * */
 public class Demo01Properties {
-    public static void main(String[] args) {
-        show02();
+    public static void main(String[] args) throws IOException {
+        show03();
+
+    }
+
+    /*
+    * Properties集合load方法
+    *存储键值对的文件，键值对的连接符可以使用= 空格
+    * */
+
+    public static void show03() throws IOException {
+        Properties pro = new Properties();
+        pro.load(new FileReader("day09-code\\x.txt"));
+        Set<String> set = pro.stringPropertyNames();
+        for (String key : set) {
+            String value = pro.getProperty(key);
+            System.out.println(key+":"+value);
+        }
 
     }
 
@@ -24,9 +41,26 @@ public class Demo01Properties {
     /*
     *Properties集合store方法
     *
-    *
+    *public void store(Writer writer,
+                  String comments)
+           throws IOException以适合使用 load(Reader) 方法的格式，
+           将此 Properties 表中的属性列表（键和元素对）写入输出字符。
     * */
-    public static void show02(){
+    public static void show02() throws IOException {
+        Properties pro = new Properties();
+        pro.setProperty("可怕","23");
+        pro.setProperty("h2","22");
+        pro.setProperty("h3","24");
+        pro.setProperty("h4","26");
+        pro.setProperty("h5","28");
+
+        //创建字节输出流/字符输出流对象
+       /* FileWriter fw = new FileWriter("day09-code\\x.txt");
+        pro.store(fw,"save data");
+
+        fw.close();*/
+       //字符流可以是中文，字节流不行
+        pro.store(new FileOutputStream("day09-code\\x.txt"),"123");
 
     }
     /*
