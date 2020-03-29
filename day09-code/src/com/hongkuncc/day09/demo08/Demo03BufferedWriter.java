@@ -18,7 +18,7 @@ import java.io.IOException;
 *    off字符串的开始索引，len写的字符个数
 *    --void write(int c) 写入单个字符
 *    --void flush() 刷新该流的缓冲
-*    --void close() 关闭刺激，但要去刷新它
+*    --void close() 关闭此流，但要去刷新它
 *
 * BufferedWriter(Writer out)
           创建一个使用默认大小输出缓冲区的缓冲字符输出流。
