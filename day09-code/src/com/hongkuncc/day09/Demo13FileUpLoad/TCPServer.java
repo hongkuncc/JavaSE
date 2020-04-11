@@ -21,14 +21,19 @@ public class TCPServer {
         }
 
 //        创建一个本地字节输出流FileOutputStream对象，构造方法中绑定要输出的目的地
-        FileOutputStream fos = new FileOutputStream("tcp_ip.png");
-        //使用本地字节输入流FileOutputStream对象中的方法read，读取客户端上传的文件
+        FileOutputStream fos = new FileOutputStream(file+"tcp_ip.png");
+        //使用网络字节输入流InputStream对象中的方法read，读取客户端上传的文件
+        System.out.println("11111111111");
+
         int len = 0;
         byte[] bytes = new byte[1024];
         while((len=is.read(bytes)) != -1){
             //使用本地字节输出流FileOutputStream对象中的方法write，读取的文件上保存到服务器
             fos.write(bytes,0,len);
         }
+
+        System.out.println("2222222222222222222");
+
 //      使用网络字节输出流OutputStream获取到网络字节输出流OutputStream对象
         socket.getOutputStream().write("上传成功".getBytes());
 

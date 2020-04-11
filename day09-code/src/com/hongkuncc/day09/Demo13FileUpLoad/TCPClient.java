@@ -30,14 +30,27 @@ public class TCPClient {
             //使用网络字节输出流OutputStream对象中的方法write，读取的文件上传到服务器
             os.write(bytes,0,len);
         }
+        /*
+        *
+        * void shutdownOutput()
+          禁用此套接字的输出流。
+        *
+        *
+        *
+        * */
+        socket.shutdownOutput();
+
         //使用Socket对象中的方法getInputStream()获取网络字节输入流InputStream
         InputStream is = socket.getInputStream();
-
+        System.out.println("333333333333333333333");
 
         //使用网络字节输入流InputStream对象中的方法read读取服务回写的数据
         while((len=fis.read(bytes)) !=-1){
             System.out.println(new String(bytes,0,len));
         }
+
+        System.out.println("444444444444444  while死循环打印");
+
         //释放资源
         fis.close();
         socket.close();
