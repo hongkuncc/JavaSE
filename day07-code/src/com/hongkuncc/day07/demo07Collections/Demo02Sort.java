@@ -48,9 +48,11 @@ public class Demo02Sort {
         list03.add(new Person("李四",23));
         list03.add(new Person("王五",45));
         list03.add(new Person("赵六",34));
+        System.out.println(list03);//
 
-        System.out.println(list03);
         Collections.sort(list03);
+        System.out.println(list03);//升序
+
     }
 
 }

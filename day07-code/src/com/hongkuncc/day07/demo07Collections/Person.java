@@ -39,7 +39,8 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        return 0;
-        return this.getAge()-o.getAge();
+
+        //return this.getAge()-o.getAge();//升序排序
+        return o.getAge()-this.getAge();//降序排序
     }
 }
