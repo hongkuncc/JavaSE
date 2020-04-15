@@ -8,7 +8,7 @@ create table if not exists `hotel_customers`
 `CtfId`             VARCHAR(100)  ,
 `Gender`            VARCHAR(100)  ,
 `Birthday`          INT  ,
-`Address `          VARCHAR(400)  ,
+`Address`          VARCHAR(400)  ,
 `Zip`               VARCHAR(100)  ,
 `Dirty`             VARCHAR(100)  ,
 `District1`         VARCHAR(100)  ,
