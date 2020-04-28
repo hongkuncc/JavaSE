@@ -20,7 +20,7 @@ create table if not exists `hotel_customers`
 `FirstNm`           VARCHAR(100)  ,
 `LastNm`            VARCHAR(100)  ,
 `Duty`              VARCHAR(100)  ,
-`Mobile`            INT  ,
+`Mobile`            VARCHAR(100)  ,
 `Tel`               VARCHAR(100)  ,
 `Fax`               VARCHAR(100)  ,
 `EMail`             VARCHAR(100)  ,
