@@ -31,6 +31,14 @@ public class Hero {
         garen.hp=383f;
         garen.armor=14f;
         garen.moveSpeed=330;
+
+        //以下是转义字符
+        char tab = '\t'; //制表符
+        char carriageReturn = '\r'; //回车
+        char newLine = '\n'; //换行
+        char doubleQuote = '\"'; //双引号
+        char singleQuote = '\''; //单引号
+        char backslash = '\\'; //反斜杠
     }
 
     void addSpeed(int speed){
