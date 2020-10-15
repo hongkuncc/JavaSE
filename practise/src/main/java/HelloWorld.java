@@ -61,7 +61,7 @@ public class HelloWorld {
         int day = 10;
         int sum=0;
         for (int k = 1; k <= day; k++) {
-            if(0==moneyEachDay)
+            if(0==moneyEachDay) //？？？？？？啥意思
                 moneyEachDay = 1;
             else
                 moneyEachDay *= 2;
