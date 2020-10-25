@@ -25,6 +25,8 @@ public class Bubble {
         System.out.println("冒泡排序");
 
 
+
+        
         for (int j = 0; j < a.length; j++) {
             for (int i = 0; i < a.length-j-1; i++) {
                 if(a[i]>a[i+1]){
