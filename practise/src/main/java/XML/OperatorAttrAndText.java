@@ -20,6 +20,8 @@ public class OperatorAttrAndText {
         Element e = doc.select("p").first();
         e.attr("class","class1");
 
+
+
         e.appendText(" Hello JSoup");
         System.out.println("==============改完后============");
         System.out.println(doc);
