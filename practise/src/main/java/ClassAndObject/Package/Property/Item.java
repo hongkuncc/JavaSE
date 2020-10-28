@@ -1,3 +1,5 @@
+package ClassAndObject.Package.Property;
+
 public class Item {
     String name;
     int price;

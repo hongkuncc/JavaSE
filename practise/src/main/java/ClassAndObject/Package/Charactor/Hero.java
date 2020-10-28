@@ -1,3 +1,5 @@
+package ClassAndObject.Package.Charactor;
+
 public class Hero {
     String name;
     float hp;
@@ -14,6 +16,48 @@ public class Hero {
     String wordAfterKilled;
 
 
+//    这个无参的构造方法，如果不写，
+//    就会默认提供一个无参的构造方法
+//    public Hero() {
+//        System.out.println("实例化一个对象的时候，必然调用构造方法");
+//    }
+
+    //有参的构造方法
+    //默认的无参的构造方法就失效了
+//    public Hero(String heroname){
+//        name = heroname;
+//    }
+//    两个参数的重载
+
+/*    public Hero(String heroname,float herohp){
+        name = heroname;
+            hp = herohp;
+        }
+    public Hero(String heroname,float herohp,float heroArmor,int heroMoveSpeed){
+        name = heroname;
+        hp = herohp;
+        armor = heroArmor;
+        moveSpeed = heroMoveSpeed;
+    }*/
+
+
+
+
+
+
+//    public static void main(String[] args) {
+//        Hero garen =  new Hero("盖伦");
+//
+//        Hero teemo =  new Hero(); //无参的构造方法“木有了”
+//    }
+
+
+    //打印内存中的虚拟地址
+    public void showAddressInMemory(){
+        System.out.println("打印this看到的虚拟地址："+this);
+    }
+
+
     public static void main(String[] args) {
         Hero garen = new Hero();
         garen.name="盖伦";
@@ -25,12 +69,16 @@ public class Hero {
         System.out.println("回血100");
         garen.recovery(100);
         System.out.println("现在的血量是:" + garen.hp);
+        System.out.println("打印对象看到的虚拟地址："+garen);
+        garen.showAddressInMemory();
 
         Hero teemo = new Hero();
-        garen.name="提莫";
-        garen.hp=383f;
-        garen.armor=14f;
-        garen.moveSpeed=330;
+        teemo.name="提莫";
+        teemo.hp=383f;
+        teemo.armor=14f;
+        teemo.moveSpeed=330;
+        System.out.println("打印对象看到的虚拟地址："+teemo);
+        teemo.showAddressInMemory();
 
         //以下是转义字符
         char tab = '\t'; //制表符
