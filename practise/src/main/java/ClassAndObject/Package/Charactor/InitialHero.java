@@ -6,6 +6,7 @@ public class InitialHero {
     public InitialHero(){
         name = InitialHero.getName("构造方法");
     }
+    //块
     {
         name = InitialHero.getName("初始化块");
     }
