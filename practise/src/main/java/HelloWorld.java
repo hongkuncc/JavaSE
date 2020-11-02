@@ -84,7 +84,7 @@ public class HelloWorld {
         System.out.println(c.length); //打印数组的长度
 
         c[4]=100; //下标4，实质上是“第5个”，即最后一个
-        c[5]=101; //下标5，实质上是“第6个”，超出范围 ,产生数组下标越界异常
+        //c[5]=101; //下标5，实质上是“第6个”，超出范围 ,产生数组下标越界异常
 
         int[] d = new int[5];
         d[0] = (int) (Math.random() * 100);
@@ -110,6 +110,37 @@ public class HelloWorld {
             System.out.print(a[kk] + " ");
         }
         System.out.println("首尾调换");
+
+        int min = 100;
+        for (int j = 0; j < d.length; j++) {
+            if (a[j] <min) {
+                min = a[j];
+            }
+            System.out.println("找出来的最小数值是："+min);
+        }
+
+
+        int aa = 0;
+        int bb = 0;
+        int cc = 0;
+        int dd = 0;
+
+        for (aa=0;aa<100;aa++) {
+            for (bb = 0; bb < 100; bb++) {
+                for (cc = 0; cc < 100; cc++) {
+                    for (dd = 0; dd < 100; dd++) {
+                        if (aa+bb==8&&cc-dd==6&&aa+cc==14&&bb+dd==10){
+                            System.out.println("aa:"+aa);
+                            System.out.println("bb:"+bb);
+                            System.out.println("cc:"+cc);
+                            System.out.println("dd:"+dd);
+
+                        }
+
+                    }
+                }
+            }
+        }
 
     }
 }
