@@ -27,10 +27,50 @@ public class CompareCharactor {
         System.out.println(str1.startsWith(start));
         System.out.println(str1.endsWith(end));
 
-        String[] s = new String[100];
 
+        /*创建一个长度是100的字符串数组
+        使用长度是2的随机字符填充该字符串数组
+        统计这个字符串数组里重复的字符串有多少种*/
+
+        String[] s = new String[100];
+        //初始化
+        for (int i = 0; i < s.length; i++) {
+            s[i] = randomString(2);
+        }
+        //打印
+        for (int i = 0; i < s.length; i++) {
+            System.out.println(s[i] + " ");
+            if (19 == i % 20) {
+                System.out.println();
+            }
+        }
+        for (String s1 : s
+                ) {
+            int repeat = 0;
+            for (String s2 : s
+                    ) {
+                if (s1.equalsIgnoreCase(s2)) {
+                    repeat++;
+                    if (2 == repeat) {
+                        // 当repeat==2的时候，就找打了一个非己的重复字符串
+                        putIntoDuplicatedArray(s1);
+                        break;
+                    }
+                }
+            }
+        }
 
     }
+        static String[] foundDuplicated = new String[100];
+        static int pos;
+
+        private static void putIntoDuplicatedArray (String s){
+            for (int i = 0; i < pos; i++) {
+                if (foundDuplicated[i].equalsIgnoreCase(s))
+                    return;
+            }
+            foundDuplicated[pos++] = s;
+        }
 
     public static String randomString(int length){
         String pool ="";
