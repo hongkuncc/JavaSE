@@ -34,7 +34,6 @@ public class MathNumber {
         }
         System.out.println("一千以内的质数共有："+count);
 
-
     }
 
     public static boolean isPrime(int i){
