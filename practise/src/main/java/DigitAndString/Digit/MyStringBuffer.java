@@ -41,16 +41,19 @@ public class MyStringBuffer implements IStringBuffer{
 
     @Override
     public void append(String str) {
+        insert(length,str);
 
     }
 
     @Override
     public void append(char c) {
+        append(String.valueOf(c));
 
     }
 
     @Override
     public void insert(int pos, char b) {
+        insert(pos,String.valueOf(b));
 
     }
 
@@ -107,5 +110,27 @@ public class MyStringBuffer implements IStringBuffer{
     @Override
     public int length() {
         return length;
+    }
+    public String toString(){
+        char[] realValue = new char[length];
+        System.arraycopy(value,0,realValue,0,length);
+        return new String(realValue);
+    }
+
+    public static void main(String[] args) {
+        MyStringBuffer sb = new MyStringBuffer("there light");
+        System.out.println(sb);
+        sb.insert(0,"let ");
+        System.out.println(sb);
+
+        sb.insert(10,"be ");
+        System.out.println(sb);
+        sb.insert(0,"God Say ");
+        System.out.println(sb);
+        sb.append("!");
+        System.out.println(sb);
+        sb.append('?');
+        sb.reverse();
+        System.out.println(sb);
     }
 }
