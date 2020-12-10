@@ -18,6 +18,10 @@ public class TestException {
         String str = null;
         str.length();*/
 
+/*        面试题常问题：: 运行时异常与非运行时异常的区别：
+        运行时异常是不可查异常，不需要进行显式的捕捉
+        非运行时异常是可查异常，必须进行显式的捕捉，或者抛出*/
+
     }
     public static int method(){
         try {
